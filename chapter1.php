@@ -1,6 +1,6 @@
 <?php 
-$base = 12;
-$height = 19;
+$base = 12.24;
+$height = 19.5;
 
 $area = 1/2*($base * $height);
 

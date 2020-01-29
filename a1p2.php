@@ -56,7 +56,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	<p><label>Age: <input type="text" name="age" size="20" maxlength="40" value=<?php if(isset($_POST['firstname'])) echo $_POST['age']; ?>></label></p>
 	
-	<p><label for="newsletter">Subscribe to newsletter: </label><input type="radio" name="newsletter" value="Y"> Yes <input type="radio" name="newsletter" value="N"> No</p>
+	<p><label for="newsletter">Subscribe to newsletter: </label><input type="radio" name="newsletter" value="Y"<?php if(isset($_POST["newsletter"]) && ($_POST["newsletter"] == "Y"))
+	echo 'checked = "checked"'; ?>> Yes <input type="radio" name="newsletter" value="N"<?php if(isset($_POST["newsletter"]) && ($_POST["newsletter"] == "N"))
+	echo 'checked = "checked"'; ?>> No</p>
 
 	</fieldset>
 

@@ -1,3 +1,29 @@
+<?php 
+function checkDuplicates($str){
+	for($i=0; $i<strlen($str); $i++){
+		for($j=$i+1; $j<strlen($str); $j++){
+			if($str[$i]==$str[$j]){
+				return true;
+			}
+		}
+	}
+return false;
+}
+
+if($_SERVER['REQUEST_METHOD']=='POST'){
+		if(!empty($_POST['firstname'])){
+			if(checkDuplicates($_POST['firstname'])){
+				echo "Entered string is duplicated";
+			}
+			else{
+				echo "Entered string is not duplicated";
+			}
+		}
+		
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>

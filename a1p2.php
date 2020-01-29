@@ -38,10 +38,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	if(!isset($_POST['newsletter'])){
 		echo "<h1> Please choose options for newsletter. </h1>";
 	}
+	if(!is_numeric($_POST['age'])){
+		echo "<h1> Please enter your age in numbers. </h1>";
+	}
+
 
 	if(empty($_POST['age'])){
 		echo "<h1> Please enter your age. </h1>";
 	}
+	
 }
 
 ?>
